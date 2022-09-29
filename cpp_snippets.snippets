@@ -12,8 +12,8 @@ snippet cl
 
 			$1 &	operator=( const $1 & rhs );
 
-			/*type*/	get( /*data*/ ) const;
-			void		set( /*data*/ );
+			/*type*/	get/*attrubut*/( /*data*/ ) const;
+			void		set/*attribut*/( const /*data*/ );
 
 		private:
 
@@ -25,25 +25,34 @@ snippet mfun
 
 	$1::$1( void )
 	{
+		std::cout << "$1 Default Constructor" << std::endl;
 	}
 
 	$1::$1( const $1 & rhs )
 	{
+		std::cout << "$1 copy Constructor" << std::endl;
+		*this = rhs;
 	}
 
 	$1::~$1( void )
 	{
+		std::cout << "$1 Default Constructor" << std::endl;
 	}
 
 	$1 &	$1::operator=( const $1 & rhs )
 	{
+		if ( this != rhs )
+		{
+		}
+		return ( *this );
 	}
 
 	/*type*/	$1::get( /*data*/ ) const
 	{
+		return ( this->/*attribut*/ );
 	}
 
 	void		$1::set( /*data*/ )
 	{
+		return ( this->/*attribut*/ );
 	}
-
