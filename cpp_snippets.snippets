@@ -41,7 +41,7 @@ snippet mfun
 
 	$1 &	$1::operator=( const $1 & rhs )
 	{
-		if ( this != rhs )
+		if ( this != &rhs )
 		{
 		}
 		return ( *this );
