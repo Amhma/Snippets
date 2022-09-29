@@ -1,0 +1,49 @@
+
+# class
+snippet cl
+	class ${1:`vim_snippets#Filename('$1', 'name')`}
+	{
+		public:
+
+			$1( void );
+			$1( const $1 & rhs );
+
+			~$1( void );
+
+			$1 &	operator=( const $1 & rhs );
+
+			/*type*/	get( /*data*/ ) const;
+			void		set( /*data*/ );
+
+		private:
+
+			${0:/* data */}
+	};
+
+snippet mfun
+	#include "${1:`vim_snippets#Filename('$1', 'ClassName')`}.hpp"
+
+	$1::$1( void )
+	{
+	}
+
+	$1::$1( const $1 & rhs )
+	{
+	}
+
+	$1::~$1( void )
+	{
+	}
+
+	$1 &	$1::operator=( const $1 & rhs )
+	{
+	}
+
+	/*type*/	get( /*data*/ ) const
+	{
+	}
+
+	void		set( /*data*/ )
+	{
+	}
+
