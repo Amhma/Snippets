@@ -20,7 +20,7 @@ snippet cl
 			${0:/* data */}
 	};
 
-snippet mfun
+snippet mmfun
 	#include "${1:`vim_snippets#Filename('$1', 'ClassName')`}.hpp"
 
 	$1::$1( void )
@@ -56,3 +56,23 @@ snippet mfun
 	{
 		return ( this->/*attribut*/ );
 	}
+# ifndef
+snippet ifn
+	#ifndef ${0:data}
+	# define $0
+
+	#endif
+# others
+snippet {
+	{
+		${0:data ...}
+	}
+snippet (
+	(${0:data})
+snippet [
+	[${0:index}]
+snippet mfu
+	${1:type}	${2:`vim_snippets#Filename('$1', 'ClassName')`}::${3:name}( ${4:data} )
+	{
+	}
+
