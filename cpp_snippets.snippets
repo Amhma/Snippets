@@ -25,18 +25,21 @@ snippet mmfun
 
 	$1::$1( void )
 	{
-		std::cout << "$1 Default Constructor" << std::endl;
+		if ( DEBUG )
+			std::cout << "$1 Default Constructor" << std::endl;
 	}
 
 	$1::$1( const $1 & rhs )
 	{
-		std::cout << "$1 copy Constructor" << std::endl;
+		if ( DEBUG )
+			std::cout << "$1 copy Constructor" << std::endl;
 		*this = rhs;
 	}
 
 	$1::~$1( void )
 	{
-		std::cout << "$1 Default Destructor" << std::endl;
+		if ( DEBUG )
+			std::cout << "$1 Default Destructor" << std::endl;
 	}
 
 	$1 &	$1::operator=( const $1 & rhs )
