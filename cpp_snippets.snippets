@@ -12,7 +12,7 @@ snippet cl
 
 			$1 &	operator=( const $1 & rhs );
 
-			/*type*/	get/*attrubut*/( /*data*/ ) const;
+			/*type*/	get/*attribut*/( void ) const;
 			void		set/*attribut*/( const /*data*/ );
 
 		private:
@@ -47,14 +47,14 @@ snippet mmfun
 		return ( *this );
 	}
 
-	/*type*/	$1::get( /*data*/ ) const
+	/*type*/	$1::get/*attribut*/( void ) const
 	{
 		return ( this->/*attribut*/ );
 	}
 
-	void		$1::set( /*data*/ )
+	void		$1::set/*attribut*/( /*data*/ )
 	{
-		return ( this->/*attribut*/ );
+		/*data*/
 	}
 # ifndef
 snippet ifn
